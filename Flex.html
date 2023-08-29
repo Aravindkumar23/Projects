@@ -8,11 +8,11 @@
       body {
         background-color: rgb(10 12 27);
         font-family: sans-serif;
-        padding: 150px;
       }
       main {
         display: flex;
         justify-content: center;
+        flex-direction: column-reverse;
       }
       span {
         color: rgb(155 84 200);
@@ -20,7 +20,7 @@
       .Parentdv {
         background-color: rgb(28 25 56);
         padding: 5%;
-        width: 350px;
+        text-align: center;
       }
       h1,
       h3 {
@@ -36,15 +36,50 @@
       }
       section {
         display: flex;
+        flex-direction: column;
         justify-content: space-between;
+        align-items: center;
       }
       .imgdv {
         background-image: url("https://img.freepik.com/free-photo/flat-lay-office-desk-assortment-with-empty-screen-tablet_23-2148707960.jpg?w=2000");
         background-color: rgba(128, 0, 128, 0.388);
         background-size: cover;
-        width: 420px;
+        height: 300px;
 
         background-blend-mode: multiply;
+      }
+
+      @media (min-width: 770px) {
+        body {
+          background-color: rgb(10 12 27);
+          font-family: sans-serif;
+          display: grid;
+          place-content: center;
+        }
+        main {
+          display: flex;
+          justify-content: center;
+          flex-direction: row;
+        }
+        .Parentdv {
+          background-color: rgb(28 25 56);
+          padding: 5%;
+          width: 350px;
+          text-align: left;
+        }
+        section {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+        }
+        .imgdv {
+          background-image: url("https://img.freepik.com/free-photo/flat-lay-office-desk-assortment-with-empty-screen-tablet_23-2148707960.jpg?w=2000");
+          background-color: rgba(128, 0, 128, 0.388);
+          background-size: cover;
+          width: 420px;
+          height: auto;
+          background-blend-mode: multiply;
+        }
       }
     </style>
   </head>
