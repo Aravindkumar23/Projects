@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      section {
+        display: flex;
+        justify-content: space-between;
+        background-image: url("image-gallery-orange.jpg");
+        height: 500px;
+      }
+      button {
+        background: none;
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>tTIme out</h1>
+    <section>
+      <button onclick=" left()">⬅️</button>
+      <button onclick="right()">➡️</button>
+    </section>
+    <script>
+      //   window.setTimeout(() => {
+      //     console.log("hi vamsi");
+      //   }, 2000);
+      //   const charanInvt = window.setInterval(() => {
+      //     console.log("hi , Charan 😊");
+      //   }, 2000);
+
+      //   window.setTimeout(() => {
+      //     window.clearInterval(charanInvt);
+      //   }, 20000);
+      let index = 0;
+      function start() {
+        // const color = [" orange", "crimson", "plum", " teal"];
+        const color = [
+          "https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?cs=srgb&dl=pexels-pixabay-268533.jpg&fm=jpg",
+          "https://cdn.pixabay.com/photo/2018/08/14/13/23/ocean-3605547_1280.jpg",
+          "https://wallpapers.com/images/hd/maldives-and-sea-holiday-hd-iyidzfb55r4ajji4.jpg",
+        ];
+        time = setInterval(() => {
+          var bgcolor = document.querySelector("section");
+          bgcolor.style.backgroundImage = ` url("${
+            color[index % color.length]
+          }")`;
+          index++;
+        }, 2000);
+      }
+      start();
+      function left() {}
+      function pause() {
+        setTimeout(() => {});
+      }
+    </script>
+  </body>
+</html>

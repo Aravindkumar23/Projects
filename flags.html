@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: rgb(233, 230, 230);
+      }
+      section {
+        display: flex;
+        gap: 16px;
+      }
+      .card {
+        overflow: hidden;
+        border-radius: 16px;
+        background-color: white;
+        border: 2px;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+          rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+      }
+      img {
+        height: 200px;
+        object-fit: cover;
+      }
+      .contents {
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      let countriesInfo = [
+        {
+          name: "India",
+          population: " 1,394,975,829",
+          region: "Asia",
+          flag: "https://upload.wikimedia.org/wikipedia/commons/7/7b/India_flag_300.png",
+          capital: "New delhi",
+        },
+        {
+          name: "Germany",
+          population: "81,770,900",
+          region: "Europe",
+          flag: "https://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/1200px-Flag_of_Germany.svg.png",
+          capital: "Berlin",
+        },
+        {
+          name: "United states",
+          population: "323,947,000",
+          region: "Americas",
+          flag: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/640px-Flag_of_the_United_States.svg.png",
+          capital: "Washington D.C",
+        },
+        {
+          name: "Brazil",
+          population: "206,135,893",
+          region: "Americas",
+          flag: "https://upload.wikimedia.org/wikipedia/commons/0/01/Brazil_flag_300.png",
+          capital: "Brasilia",
+        },
+        {
+          name: "Iceland",
+          population: "334,300",
+          region: "Europe",
+          flag: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Flag_of_Iceland.svg/640px-Flag_of_Iceland.svg.png",
+          capital: "Reykjavik",
+        },
+      ];
+      const section = document.createElement("section");
+      document.body.appendChild(section);
+      const content_body = document.querySelector("section");
+
+      countriesInfo.forEach((country) => {
+        const container = document.createElement("div");
+        container.className = " card";
+        const flag = document.createElement("img");
+        flag.classname = "flagimage";
+        flag.setAttribute("src", country.flag);
+        flag.setAttribute("alt", country.name);
+        const details = document.createElement("div");
+        details.className = "contents";
+        details.innerHTML = `<h2>${country.name}</h2>
+         <p><Strong>Population:</Strong>${country.population}</p>
+         <p><Strong>Region:</Strong>${country.region}</p>
+         <p><Strong>Captial:</Strong>${country.capital}</p>`;
+
+        container.appendChild(flag);
+        container.appendChild(details);
+        content_body.appendChild(container);
+      });
+    </script>
+  </body>
+</html>

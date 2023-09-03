@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      p:before {
+        content: "“";
+        font-size: 100px;
+        color: rgba(249, 246, 249, 0.322);
+      }
+      p {
+        background-color: purple;
+        color: white;
+        position: relative;
+        width: 900px;
+      }
+      span {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        transform: translate(20px, 37px);
+        font-size: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <p>
+        <span
+          >I had seriously high expectations for Josh's CSS course.And honestly?
+          It's exceeded them</span
+        >
+      </p>
+    </section>
+  </body>
+</html>

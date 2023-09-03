@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: purple;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>tTIme out</h1>
+    <button onclick="onclkbtn()">start</button>
+    <button onclick=" ontimeout()">stop</button>
+    <button onclick=" onpause()">pause</button>
+    <script>
+      //   window.setTimeout(() => {
+      //     console.log("hi vamsi");
+      //   }, 2000);
+      //   const charanInvt = window.setInterval(() => {
+      //     console.log("hi , Charan 😊");
+      //   }, 2000);
+
+      //   window.setTimeout(() => {
+      //     window.clearInterval(charanInvt);
+      //   }, 20000);
+      var time;
+      let index = 0;
+      function onclkbtn() {
+        const color = [" orange", "crimson", "plum", " teal"];
+        time = setInterval(() => {
+          document.body.style.background = color[index % color.length];
+          index++;
+        }, 2000);
+      }
+      function ontimeout() {
+        clearInterval(time);
+      }
+      function onpause() {
+        setTimeout(time);
+      }
+    </script>
+  </body>
+</html>
